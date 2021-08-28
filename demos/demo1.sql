@@ -16,6 +16,7 @@ SELECT
     ProductID,
     LineTotal,
     SUM(LineTotal) OVER (ORDER BY PurchaseOrderID
-        ROWS UNBOUNDED PRECEDING) TotalDue 
+        --ROWS UNBOUNDED PRECEDING) TotalDue
+        ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) TotalDue 
 FROM Purchasing.PurchaseOrderDetail
 ORDER BY PurchaseOrderID;

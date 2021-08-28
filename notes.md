@@ -11,4 +11,5 @@ ROW_NUMBER ( OVER ( [PARTITION BY] value_expression, ... [ n ] ] order_by_clause
 ### Framing
 - Rows/Range; difference between using memory and TempDB
 - Keywords: Preceding, Following, Unbounded, Current
+- Whenever your rows contain duplicates, it might be a good idea to use framing inside your T-SQL Clause.
 
